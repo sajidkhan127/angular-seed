@@ -1,2 +1,11 @@
-<app-navbar></app-navbar>
+<app-navbar [templateContent]="navbarTemplate">
+  <ng-template #navbarTemplate>
+    <app-logo></app-logo>
+    <app-menu-list [items]="menuItems" [template]="listItemTemplate">
+      <ng-template #listItemTemplate let-item>
+        <app-menu-list-item [item]="item"></app-menu-list-item>
+      </ng-template>
+    </app-menu-list>
+  </ng-template>
+</app-navbar>
 <h1>Welcome</h1>

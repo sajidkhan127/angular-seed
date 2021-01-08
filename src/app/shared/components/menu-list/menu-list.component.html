@@ -1,0 +1,25 @@
+<ul id="ul_list">
+  <!-- composition  -->
+  <!-- here we are passing menu items array and list item template reference from the page where menu is to be created. -->
+  <ng-container *ngFor="let item of items">
+    <ng-container *ngTemplateOutlet="template; context: { $implicit: item }">
+    </ng-container>
+  </ng-container>
+  <!-- <li><a routerLink="/about">About</a></li>
+  <li><a routerLink="/guide">Angular Guid</a></li>
+  <li><a routerLink="/login">Login</a></li> -->
+</ul>
+
+<!-- <div *ngFor="let item of items | slice: start:end">
+    <ng-container *ngTemplateOutlet="template; context: { item: item }">
+    </ng-container>
+  </div>
+
+  <ng-template #item let-item="item">
+    <customer
+      (selected)="selected($event)"
+      (unselected)="unselected($event)"
+      [item]="item"
+      [isSelected]="isItemSelected(item)"
+    ></customer>
+  </ng-template> -->

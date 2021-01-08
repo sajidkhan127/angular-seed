@@ -3,13 +3,9 @@ import { CommonModule } from '@angular/common';
 import { EnsureImportedOnceModule } from './ensure-imported-once.module';
 import { httpInterceptorProviders } from './http-interceptors';
 
-
-
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule],
   providers: [httpInterceptorProviders],
   entryComponents: [],
 })

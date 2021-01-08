@@ -1,0 +1,13 @@
+li {
+  list-style-type: none;
+  display: inline-block;
+  a {
+    color: #fff;
+    padding: 0.5em;
+    text-decoration: none;
+    &:hover {
+      background-color: #2586d7;
+      color: #fff;
+    }
+  }
+}
