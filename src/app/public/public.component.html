@@ -1,4 +1,4 @@
-<app-navbar [templateContent]="navbarTemplate">
+<!-- <app-navbar [templateContent]="navbarTemplate">
   <ng-template #navbarTemplate>
     <app-logo></app-logo>
     <app-menu-list [items]="menuItems" [template]="listItemTemplate">
@@ -7,6 +7,24 @@
       </ng-template>
     </app-menu-list>
   </ng-template>
-</app-navbar>
+</app-navbar> -->
 
-<router-outlet></router-outlet>
+<nz-layout class="layout">
+  <nz-header class="header">
+    <!-- <div nz-row> -->
+    <!-- <div nz-col nzSpan="12"> -->
+    <app-logo></app-logo>
+    <app-menu-list [items]="menuItems"> </app-menu-list>
+    <!-- </div> -->
+    <!-- <div nz-col nzSpan="12"> -->
+    <div class="spacer"></div>
+    <app-menu-list [items]="rightMenus"> </app-menu-list>
+    <!-- </div> -->
+    <!-- </div> -->
+  </nz-header>
+  <nz-content>
+    <div class="inner-content">
+      <router-outlet></router-outlet>
+    </div>
+  </nz-content>
+</nz-layout>

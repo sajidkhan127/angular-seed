@@ -1,12 +1,10 @@
-<app-navbar [templateContent]="navbarTemplate">
-  <ng-template #navbarTemplate>
+<nz-layout class="layout">
+  <nz-header>
     <app-logo></app-logo>
-    <app-menu-list [items]="menuItems" [template]="listItemTemplate">
-      <ng-template #listItemTemplate let-item>
-        <app-menu-list-item [item]="item"></app-menu-list-item>
-      </ng-template>
-    </app-menu-list>
-  </ng-template>
-</app-navbar>
-
-<router-outlet></router-outlet>
+  </nz-header>
+  <nz-content>
+    <div class="inner-content">
+      <router-outlet></router-outlet>
+    </div>
+  </nz-content>
+</nz-layout>
