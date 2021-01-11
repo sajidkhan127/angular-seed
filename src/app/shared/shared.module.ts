@@ -17,6 +17,6 @@ const HEADER_COMPONENTS = [
 @NgModule({
   declarations: [...HEADER_COMPONENTS],
   imports: [CommonModule, FormsModule, RouterModule],
-  exports: [...HEADER_COMPONENTS],
+  exports: [...HEADER_COMPONENTS, RouterModule],
 })
 export class SharedModule {}

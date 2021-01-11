@@ -1,29 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+  // { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+
   {
-    path: 'welcome',
+    path: '',
     loadChildren: () =>
-      import('./public/welcome/welcome.module').then((m) => m.WelcomeModule),
+      import('./public/public.module').then((m) => m.PublicModule),
   },
+
   {
-    path: 'guide',
+    path: 'auth',
     loadChildren: () =>
-      import('./public/angular-guide/angular-guide.module').then(
-        (m) => m.AngularGuideModule
-      ),
-  },
-  {
-    path: 'login',
-    loadChildren: () =>
-      import('./public/login/login.module').then((m) => m.LoginModule),
-  },
-  {
-    path: 'about',
-    loadChildren: () =>
-      import('./public/about/about.module').then((m) => m.AboutModule),
+      import('./public/auth/auth.module').then((m) => m.AuthModule),
   },
 ];
 

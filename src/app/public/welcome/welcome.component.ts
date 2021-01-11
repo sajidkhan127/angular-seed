@@ -1,18 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { Menu } from '../menu';
 
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.scss'],
 })
-export class WelcomeComponent implements OnInit {
-  menuItems = [
-    { title: 'Home', routerLink: '/' },
-    { title: 'About', routerLink: '/about' },
-    { title: 'Angular Guide', routerLink: '/guide' },
-    { title: 'login', routerLink: '/login' },
-  ];
-  constructor() {}
+export class WelcomeComponent extends Menu implements OnInit {
+  constructor() {
+    super();
+  }
 
   ngOnInit(): void {}
 }

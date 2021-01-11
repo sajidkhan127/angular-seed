@@ -1,18 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { Menu } from '../menu';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
 })
-export class AboutComponent implements OnInit {
-  menuItems = [
-    { title: 'Home', routerLink: '/' },
-    { title: 'About', routerLink: '/about' },
-    { title: 'Angular Guide', routerLink: '/guide' },
-    { title: 'login', routerLink: '/login' },
-  ];
-  constructor() {}
+export class AboutComponent extends Menu implements OnInit {
+  constructor() {
+    super();
+  }
 
   ngOnInit(): void {}
 }
