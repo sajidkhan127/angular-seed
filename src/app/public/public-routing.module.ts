@@ -12,13 +12,6 @@ const routes: Routes = [
         loadChildren: () =>
           import('./welcome/welcome.module').then((m) => m.WelcomeModule),
       },
-      {
-        path: 'guide',
-        loadChildren: () =>
-          import('./angular-guide/angular-guide.module').then(
-            (m) => m.AngularGuideModule
-          ),
-      },
 
       {
         path: 'about',
